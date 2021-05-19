@@ -4,11 +4,13 @@ import mysql.connector as sqlConnect
 import matplotlib.pyplot as plt
 from datetime import date,datetime
 from form import RegistrationForm, LoginForm
+from database import *
 
 app = Flask(__name__)
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
+	
 	if request.method == 'POST':
 		email = request.form.get("email")
 	return render_template('login.html', title = 'Login - CMS')
