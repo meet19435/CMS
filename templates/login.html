@@ -10,11 +10,11 @@
 <body>
     <header> 
         <ul>
-            <li><a href="home.html" class="active1">Home</a></li>
-            <li><a href="about.html" class="active2">About</a></li>
+            <li><a href="{{ url_for('home') }}" class="active1">Home</a></li>
+            <li><a href="{{ url_for('about') }}" class="active2">About</a></li>
         </ul>
         <h1>Logo</h1>
-        <a id="Sign" href="login.html" class="active3">Sign In</a>
+        <a id="Sign" href="{{ url_for('login') }}" class="active3">Sign In</a>
     </header>
     <div class="outline"></div>
     <img src="{{ url_for('static', filename='images/login.svg') }}" style="margin-left: 10%;
