@@ -70,22 +70,42 @@ header #Sign:hover {
   background: transparent;
 }
 .gallery-cell {
-  width: 66%;
+  width: 50%;
   height: 300px;
-  margin-right: 10px;
+  margin-right: 1%;
   background: #eee;
   counter-increment: gallery-cell;
   box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
-
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 300px;
-  font-size: 80px;
+.gallery-cell h3{
+  background: #314d74;
   color: white;
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.gallery-cell p{
+  padding-top: 10%;
+  text-align: left;
+  float: left;
+  padding-left: 5%;
+  width: 70%;
+}
+.gallery-cell img{
+  float: right;
+  width: 200px;
+  height: 250px;
+  margin-top: 5px;
+  margin-right: 10px;
+  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5);
+}
+.gallery-cell a i{
+  float: left;
+  font-size: 20px;
+  color: #314d74;
 }
 section h1 {
   position: relative;
@@ -126,4 +146,17 @@ section #read_more {
   font-size: 20px;
   text-decoration: none;
   padding: 10px;
+}
+@media screen and (max-width: 1350px) {
+  .gallery-cell img{
+    display: none;
+  }
+  .gallery-cell p{
+    float: none;
+    text-align: left; 
+    vertical-align: middle;
+    display: table-cell;
+    padding-right: 5%;
+    padding-top: 15%;
+  }
 }
