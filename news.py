@@ -67,7 +67,10 @@ def get_news(data, news_display_count):                             # for select
             try:
                 image_link =i["data"]["thumbnail"]
                 if(tag=="Crime &amp; Corruption" or tag=="Coronavirus"):    # our priority is to show news related crime and coronavirus
-                    news_arr.append((title,tag,link,image_link))
+                    if(tag=="Crime &amp; Corruption"):
+                        news_arr.append((title,"Crime and Corruption",link,image_link))
+                    else:
+                        news_arr.append((title,tag,link,image_link))
                 else:
                     secondary_news_arr.append((title,tag,link,image_link))
             except: 
