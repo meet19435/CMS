@@ -3,7 +3,7 @@ import os
 import mysql.connector as sqlConnect
 import matplotlib.pyplot as plt
 from datetime import date,datetime
-from form import RegistrationForm, LoginForm
+##from form import RegistrationForm, LoginForm
 from database import *
 
 app = Flask(__name__)
