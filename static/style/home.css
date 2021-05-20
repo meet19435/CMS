@@ -96,9 +96,7 @@ header #Sign:hover {
 }
 .gallery-cell img{
   float: right;
-  width: 200px;
-  height: 250px;
-  margin-top: 5px;
+  margin-top: 25px;
   margin-right: 10px;
   box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5);
 }
