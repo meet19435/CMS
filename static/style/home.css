@@ -70,6 +70,7 @@ header #Sign:hover {
   background: transparent;
 }
 .gallery-cell {
+  position: relative;
   width: 50%;
   height: 300px;
   margin-right: 1%;
@@ -79,6 +80,8 @@ header #Sign:hover {
   overflow: auto;
   border-radius: 10px;
   margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .gallery-cell h3{
   background: #314d74;
@@ -88,15 +91,17 @@ header #Sign:hover {
   padding-bottom: 1%;
 }
 .gallery-cell p{
-  padding-top: 10%;
+  margin-top: 5%;
   text-align: left;
   float: left;
   padding-left: 5%;
-  width: 70%;
+  max-width: 70%;
+  font-size: 20px;
+  font-weight: 400;
 }
 .gallery-cell img{
   float: right;
-  margin-top: 25px;
+  margin-top: 4%;
   margin-right: 10px;
   box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -107,7 +112,7 @@ header #Sign:hover {
 }
 section h1 {
   position: relative;
-  margin-top: 2%;
+  margin-top: 5%;
   margin-left: 10%;
   font-size: 35px;
 }
@@ -145,7 +150,7 @@ section #read_more {
   text-decoration: none;
   padding: 10px;
 }
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1400px) {
   .gallery-cell img{
     display: none;
   }
@@ -155,6 +160,6 @@ section #read_more {
     vertical-align: middle;
     display: table-cell;
     padding-right: 5%;
-    padding-top: 15%;
+    padding-top: 10%;
   }
 }
