@@ -53,7 +53,7 @@ def access_data_using_access_token(access_token):                   # for making
     news_data = response.json()
     return news_data
 
-def get_news(data):                                                 # for selection of k news that will be displayed on website
+def get_news(data, news_display_count):                             # for selection of k news that will be displayed on website
                                                                     # news data is already fetched  
     news_arr = []
     secondary_news_arr = []
@@ -77,7 +77,6 @@ def get_news(data):                                                 # for select
             b = 1
             
     count = 0
-    news_display_count = 5                                          # no of news to be displayed on website
     
     while(len(news_arr)<news_display_count and count< len(secondary_news_arr)):
         news_arr.append(secondary_news_arr[count])
@@ -101,15 +100,14 @@ def get_news(data):                                                 # for select
     return news_arr[:news_display_count]
 
 
-def run():
+def run(news_display_count):                                         # no of news to be displayed on website is taken as a input
     # code = authorization()                                         # neccessary to be called (once), we have already called it, thats why commented
     # code = "StGMrNVZPYDcz_O5_mJAeKBqVqwF_Q"                        # recieved code
     # access_token,refresh_token = access_token_for_first_time()     # neccessary to be called (once)
     refresh_token = "958457112293-OrYIQgBY_hFShbylSiEGI7IKeIPpAQ"    # refersh token is received when access token was retrieved for
                                                                      # first time (when access_token_for_first_time was called) 
-
     access_token = access_refresh_token(refresh_token)
     news_data = access_data_using_access_token(access_token)
-    news_arr = get_news(news_data)
+    news_arr = get_news(news_data, news_display_count)
     return news_arr
     
