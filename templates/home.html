@@ -27,35 +27,35 @@
             <p>{{ news[0][0] }}<br><a href={{news[0][2]}}><i
                         class="material-icons">launch</i></a>
             </p>
-            <img src={{news[0][3]}} style="width: 200px; height: 200px;">
+            <a href={{news[0][3]}}><img src={{news[0][3]}} style="width: 200px; height: 150px;"></a>
         </div>
         <div class="gallery-cell">
             <h3>{{ news[1][1] }}</h3>
             <p>{{ news[1][0] }}<br><a href={{news[1][2]}}><i
                         class="material-icons">launch</i></a>
             </p>
-            <img src={{news[1][3]}} style="width: 200px; height: 200px;">
+            <a href={{news[1][3]}}><img src={{news[1][3]}} style="width: 200px; height: 150px;"></a>
         </div>
         <div class="gallery-cell">
             <h3>{{ news[2][1] }}</h3>
             <p>{{ news[2][0] }}<br><a href={{news[2][2]}}><i
                         class="material-icons">launch</i></a>
             </p>
-            <img src={{news[2][3]}} style="width: 200px; height: 200px;">
+            <a href={{news[2][3]}}><img src={{news[2][3]}} style="width: 200px; height: 150px;"></a>
         </div>
         <div class="gallery-cell">
             <h3>{{ news[3][1] }}</h3>
             <p>{{ news[3][0] }}<br><a href={{news[3][2]}}><i
                         class="material-icons">launch</i></a>
             </p>
-            <img src={{news[3][3]}} style="width: 200px; height: 200px;">
+            <a href={{news[3][3]}}><img src={{news[3][3]}} style="width: 200px; height: 150px;"></a>
         </div>
         <div class="gallery-cell">
             <h3>{{ news[4][1] }}</h3>
             <p>{{ news[4][0] }}<br><a href={{news[4][2]}}><i
                         class="material-icons">launch</i></a>
             </p>
-            <img src={{news[4][3]}} style="width: 200px; height: 200px;">
+            <a href={{news[4][3]}}><img src={{news[4][3]}} style="width: 200px; height: 150px;"></a>
         </div>
     </div>
     <section>
@@ -70,7 +70,7 @@
             molestie nunc non blandit massa enim nec. Diam maecenas sed enim ut sem viverra aliquet eget. Ac turpis
             egestas maecenas pharetra convallis posuere.
         </p>
-        <button><a id="read_more" href="about.html">Read more</a></button>
+        <button><a id="read_more" href="{{url_for('about')}}">Read more</a></button>
     </section>
     <script src="{{ url_for('static', filename='javascript/flickity.pkgd.js') }}"></script>
 </body>

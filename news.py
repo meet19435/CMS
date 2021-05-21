@@ -48,7 +48,7 @@ def access_refresh_token(refresh_token):                            # for refers
 
 def access_data_using_access_token(access_token):                   # for making api request to get news data
     
-    response  = requests.get("https://oauth.reddit.com/r/IndiaNews/hot", 
+    response  = requests.get("https://oauth.reddit.com/r/IndiaNews/new", 
                              headers = {"User-Agent":"cms2021","Authorization": "bearer "+access_token })
     news_data = response.json()
     return news_data
