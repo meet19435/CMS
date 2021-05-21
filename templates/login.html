@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
-    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -42,37 +42,43 @@
         <form class="singupform">
             <div class="head">
                 <a href="#" onclick="toggle()"><i class="material-icons md-36">cancel</i></a>
-                <p>Sign Up</p>
+                <p>Sign up</p>
             </div>
             <p id="outline"></p>
             <div class="name">
                 <p>Name</p>
-                <input type="text" id="fname" name="firstName" placeholder=" First Name">
-                <input type="text" id="mname" name="middleName" placeholder=" Middle Name">
-                <input type="text" id="lname" name="lastName" placeholder=" Last Name">
+                <div class="nameIn">
+                    <input type="text" id="fname" name="firstName" placeholder=" First Name">
+                    <input type="text" id="mname" name="middleName" placeholder=" Middle Name">
+                    <input type="text" id="lname" name="lastName" placeholder=" Last Name">
+                </div>
             </div>
             <div class="email">
                 <p>Email</p>
-                <input type="email" id="emailin1" name="email" placeholder=" Email">
+                <input type="email" id="emailin1" name="email">
             </div>
             <div class="aadhar">
                 <p>Aadhar Number</p>
-                <input type="text" id="aadhar" name="aadharCard" placeholder=" Aadhar Card" maxlength="12">
+                <input type="text" id="aadhar" name="aadharCard" maxlength="12">
             </div>
             <div class="address">
                 <p>Address</p>
-                <input type="number" id="hNo" name="houseNo" placeholder=" House Number">
-                <input type="text" id="society" name="society" placeholder=" Society">
-                <input type="text" id="pin" name="pinCode" placeholder=" Pin Code" maxlength="6">
-                <input type="text" id="locality" name="locality" placeholder=" Locality">
+                <div class="grid">
+                    <div class="flex">
+                        <input type="number" id="hNo" name="houseNo" placeholder=" House No.">
+                        <input type="text" id="society" name="society" placeholder=" Society">
+                        <input type="text" id="pin" name="pinCode" placeholder=" Pin Code" maxlength="6">
+                    </div>
+                    <input type="text" id="locality" name="locality" placeholder=" Locality">
+                </div>
             </div>
             <div class="mobile">
                 <p>Mobile Number</p>
-                <input type="text" id="mobile" name="mobileNumber" placeholder=" Mobile Number" maxlength="10">
+                <input type="text" id="mobile" name="mobileNumber" maxlength="10">
             </div>
-            <a href="credentials.html">Sign Up</a>
+            <a id="button" href="credentials.html">Sign up</a>
             <div class="ifAccExists">
-                <p>Already have an account</p>
+                <p>Already have an account?</p>
                 <a href="login.html">Sign in</a>
             </div>
         </form>

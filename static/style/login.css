@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+:root{
+  --singup-font-family: 'Poppins', sans-serif;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 header {
   display: flex;
@@ -136,10 +144,10 @@ header #Sign.active3 {
   font-size: 17px;
   text-decoration: none;
   padding-left: 5px;
-  color: #314d74;
+  color: #6F9EDF;
 }
 #popup{
-  position: fixed;
+    position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -147,7 +155,7 @@ header #Sign.active3 {
     border-radius: 10px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     background: #fff;
-    /*visibility: hidden;*/
+    visibility: hidden;
     opacity: 0;
     border-radius: 10px;
     transition: 0.5s;
@@ -161,9 +169,8 @@ header #Sign.active3 {
 }
 #popup .singupform .head a{
   float: left;
-  font-size: 30px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
   color: #fff;
 }
 .material-icons.md-36{ 
@@ -171,11 +178,12 @@ header #Sign.active3 {
 }
 #popup .singupform .head p{
   float: center;
-  margin-left: 30%;
-  font-size: 30px;
+  margin-left: 35%;
+  font-size: 25px;
   color: #fff;
-  padding: 10px;
-  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  font-family: var(--singup-font-family);
+  font-weight: 500;
 }
 .material-icons.md-36{ 
   font-size: 36px; 
@@ -186,7 +194,155 @@ header #Sign.active3 {
   height: 10px;
 }
 #popup .singupform .name p{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .name .nameIn{
+  display: flex;
+  height: 30px;
+}
+#popup .singupform .name .nameIn input{
+  margin-left: 5%;
+  width: 25%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
   padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .email p{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .email input{
+  height: 30px;
+  margin-left: 5%;
+  width: 35%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .aadhar p{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .aadhar input{
+  height: 30px;
+  margin-left: 5%;
+  width: 25%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .address p{
+  margin-top: 2%;
+  margin-left: 5%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .address .grid{
+  display: grid;
+}
+#popup .singupform .address .grid .flex{
+  display: flex;
+}
+#popup .singupform .address .grid .flex input{
+  height: 30px;
+  margin-left: 5%;
+  width: 25%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .address .grid .flex #hNo{
+  width: 15%;
+}
+#popup .singupform .address .grid .flex #society{
+  width: 40%;
+}
+#popup .singupform .address .grid .flex #pin{
+  width: 20%;
+}
+#popup .singupform .address .grid input{
+  height: 30px;
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 85%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .mobile p{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .mobile input{
+  height: 30px;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  width: 25%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform #button{
+  font-family: var(--singup-font-family);
+  background: #314d74;
+  border-radius: 35px;
+  border: #314d74 solid;
+  color: #fff;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  text-align: center;
+  margin-bottom: 2.5%;
+}
+#popup .singupform #button:hover {
+  cursor: pointer;
+  color: #314d74;
+  background: #fff;
+  transition: all 0.5s;
+}
+#popup .singupform .ifAccExists p{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+#popup .singupform .ifAccExists a{
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #6F9EDF;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 2%;
 }
 #popup.activate
 {
@@ -208,5 +364,17 @@ header #Sign.active3 {
     margin: 0 auto;
     margin-top: 10%;
     width: 50%;
+  }
+}
+@media screen and (max-height: 500px){
+  .form{
+    margin-top: 5%;
+    height: 100vh;
+  }
+  .form #head, .form #outline{
+    display: none;
+  }
+  .form #email{
+    margin-top: 10%;
   }
 }
