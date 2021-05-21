@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,54 +8,82 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
 </head>
+
 <body>
-    <header> 
-        <ul>
-            <li><a href="{{ url_for('home') }}" class="active1">Home</a></li>
-            <li><a href="{{ url_for('about') }}" class="active2">About</a></li>
-        </ul>
-        <h1>Logo</h1>
-        <a id="Sign" href="{{ url_for('login') }}" class="active3">Sign In</a>
-    </header>
-    <div class="outline"></div>
-    <img src="{{ url_for('static', filename='images/login.svg') }}" style="margin-left: 10%;
-    margin-top: 5%;
-    width: 40%;">
-    <form class="form" method="POST">
-        <p id="head"></p>
-        <p id="outline"></p>
-        <p id="email">Email</p>
-        <input type="email" id="emailin" name="email" placeholder=" abc@google.com">
-        <p id="pass">Password</p>
-        <input type="password" id="pwd" name="pwd">
-        <input id="submit" type="submit" value="Login">
-        <div id="sign-up">
-            <p>Create an account -</p>
-            <a href="#" onclick="toggle()"> Sign Up</a>
-        </div>
-    </form>
-    <div id="popup">
-        <form class="singupform">
+    <div id="blur">
+        <header>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="active1">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="active2">About</a></li>
+            </ul>
+            <h1>Logo</h1>
+            <a id="Sign" href="{{ url_for('login') }}" class="active3">Sign In</a>
+        </header>
+        <div class="outline"></div>
+        <img src="{{ url_for('static', filename='images/login.svg') }}" style="margin-left: 10%;
+        margin-top: 2.5%;
+        width: 40%;">
+        <form class="form" method="POST">
             <p id="head"></p>
             <p id="outline"></p>
-            <input type="text" id="aadhar" name="aadharCard" placeholder=" Aadhar Card" maxlength="12">
+            <p id="email">Email</p>
+            <input type="email" id="emailin" name="email" placeholder=" abc@google.com">
+            <p id="pass">Password</p>
+            <input type="password" id="pwd" name="pwd">
+            <input id="submit" type="submit" value="Login">
+            <div id="sign-up">
+                <p>Create an account -</p>
+                <a href="#" onclick="toggle()"> Sign Up</a>
+            </div>
+        </form>
+    </div>
+    <div id="popup">
+        <form class="singupform">
+            <div class="head">
+                <a href="#" onclick="toggle()"><i class="material-icons md-36">cancel</i></a>
+                <p>Sign Up</p>
+            </div>
+            <p id="outline"></p>
             <div class="name">
                 <p>Name</p>
                 <input type="text" id="fname" name="firstName" placeholder=" First Name">
                 <input type="text" id="mname" name="middleName" placeholder=" Middle Name">
                 <input type="text" id="lname" name="lastName" placeholder=" Last Name">
             </div>
-            <input type="email" id="emailin1" name="email" placeholder=" Email">
+            <div class="email">
+                <p>Email</p>
+                <input type="email" id="emailin1" name="email" placeholder=" Email">
+            </div>
+            <div class="aadhar">
+                <p>Aadhar Number</p>
+                <input type="text" id="aadhar" name="aadharCard" placeholder=" Aadhar Card" maxlength="12">
+            </div>
             <div class="address">
                 <p>Address</p>
                 <input type="number" id="hNo" name="houseNo" placeholder=" House Number">
                 <input type="text" id="society" name="society" placeholder=" Society">
-                <input type="text" id="locality" name="locality" placeholder=" Locality">
                 <input type="text" id="pin" name="pinCode" placeholder=" Pin Code" maxlength="6">
+                <input type="text" id="locality" name="locality" placeholder=" Locality">
             </div>
-            <input type="text" id="mobile" name="mobileNumber" placeholder=" Mobile Number" maxlength="10">
+            <div class="mobile">
+                <p>Mobile Number</p>
+                <input type="text" id="mobile" name="mobileNumber" placeholder=" Mobile Number" maxlength="10">
+            </div>
             <a href="credentials.html">Sign Up</a>
+            <div class="ifAccExists">
+                <p>Already have an account</p>
+                <a href="login.html">Sign in</a>
+            </div>
         </form>
     </div>
 </body>
+<script type="text/javascript">
+    function toggle() {
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('activate');
+        var popup = document.getElementById('popup');
+        popup.classList.toggle('activate');
+    }
+</script>
+
 </html>
