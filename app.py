@@ -9,14 +9,29 @@ from news import run
 
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY']='2b293a243de5cb3f6d6e4eb4a0b526fa'
 
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
 	
-	if request.method == 'POST':
+	if request.method == 'POST' and request.form['action'] =='Login':
+		
 		email = request.form.get("email")
+		password = request.form.get("pwd")
+		isValid = checkCredentials(email,password)
+
+		if(isValid):
+			flash('Welcome to CMS','Success')
+		else:
+			flash('Incorrect Password or Email','failure')
+
+		return redirect(url_for('login'))
+
+	elif request.method == 'POST' and request.form['action'] == 'sign-up':
+		
+		return redirect(url_for('login'))
+
 	return render_template('login.html', title = 'Login - CMS')
 
 @app.route('/home')

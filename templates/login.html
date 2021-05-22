@@ -24,22 +24,33 @@
         <img src="{{ url_for('static', filename='images/login.svg') }}" style="margin-left: 10%;
         margin-top: 2.5%;
         width: 40%;">
-        <form class="form" method="POST">
+        <form class="form" action="" method="POST">
             <p id="head"></p>
             <p id="outline"></p>
             <p id="email">Email</p>
             <input type="email" id="emailin" name="email" placeholder=" abc@google.com">
             <p id="pass">Password</p>
             <input type="password" id="pwd" name="pwd">
-            <input id="submit" type="submit" value="Login">
+            <input id="submit" type="submit" name="action" value="Login">
             <div id="sign-up">
                 <p>Create an account -</p>
                 <a href="#" onclick="toggle()"> Sign Up</a>
             </div>
         </form>
+        {% block content %}
+            <div class="container">
+                {% for message in get_flashed_messages() %}
+                    <div class="alert alert-warning">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+            {% block page_content %}{% endblock %}
+            </div>
+      {% endblock %}
     </div>
     <div id="popup">
-        <form class="singupform">
+        <form class="singupform" action="" method = "POST">
             <div class="head">
                 <a href="#" onclick="toggle()"><i class="material-icons md-36">cancel</i></a>
                 <p>Sign up</p>
@@ -76,10 +87,10 @@
                 <p>Mobile Number</p>
                 <input type="text" id="mobile" name="mobileNumber" maxlength="10">
             </div>
-            <a id="button" href="credentials.html">Sign up</a>
+            <input id="submit1" type="submit" name="action" value="sign-up">
             <div class="ifAccExists">
                 <p>Already have an account?</p>
-                <a href="login.html">Sign in</a>
+                <a href="#" onclick="toggle()">Sign in</a>
             </div>
         </form>
     </div>
