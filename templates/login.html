@@ -32,25 +32,18 @@
             <p id="pass">Password</p>
             <input type="password" id="pwd" name="pwd">
             <input id="submit" type="submit" name="action" value="Login">
+            <div class="alert">
+                <i class="material-icons">error_outline</i>
+                <p id="incorrect"></p>
+            </div>
             <div id="sign-up">
                 <p>Create an account -</p>
                 <a href="#" onclick="toggle()"> Sign Up</a>
             </div>
         </form>
-        {% block content %}
-            <div class="container">
-                {% for message in get_flashed_messages() %}
-                    <div class="alert alert-warning">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-
-            {% block page_content %}{% endblock %}
-            </div>
-      {% endblock %}
     </div>
     <div id="popup">
-        <form class="singupform" action="" method = "POST">
+        <form class="singupform" action="" method="POST">
             <div class="head">
                 <a href="#" onclick="toggle()"><i class="material-icons md-36">cancel</i></a>
                 <p>Sign up</p>
@@ -87,7 +80,7 @@
                 <p>Mobile Number</p>
                 <input type="text" id="mobile" name="mobileNumber" maxlength="10">
             </div>
-            <input id="submit1" type="submit" name="action" value="sign-up">
+            <input id="submit1" type="submit" name="action" value="Sign up">
             <div class="ifAccExists">
                 <p>Already have an account?</p>
                 <a href="#" onclick="toggle()">Sign in</a>
@@ -103,4 +96,5 @@
         popup.classList.toggle('activate');
     }
 </script>
+
 </html>
