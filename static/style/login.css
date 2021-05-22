@@ -151,7 +151,8 @@ header #Sign.active3 {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    max-width: 600px;
+    max-height: 600px;
     border-radius: 10px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     background: #fff;
@@ -262,7 +263,7 @@ header #Sign.active3 {
   border-radius: 5px;
   background: #f8f8f8;
   border: none;
-  padding: 10px;
+  padding: 5px;
   box-shadow: 0px 2px 5px 3px #00000040;
 }
 #popup .singupform .address .grid .flex #hNo{
@@ -376,5 +377,32 @@ header #Sign.active3 {
   }
   .form #email{
     margin-top: 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #popup .singupform .head p{
+    float: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px;
+    font-family: var(--singup-font-family);
+    font-weight: 400;
+  }
+  #popup .singupform .head a{
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  .material-icons.md-36{ 
+    font-size: 24px; 
+  }
+  #popup .singupform #button{
+    font-size: 15px;
+    width: 35%;
+  }
+  #popup .singupform .ifAccExists p{
+    font-size: 15px;
+    font-weight: 400;
   }
 }
