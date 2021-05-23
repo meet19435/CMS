@@ -36,3 +36,31 @@ def checkCredentials(email,password):
 		return False
 
 
+
+def addComplainant(form):
+	firstName = form.get("firstName")
+	middleName = form.get("middleName")
+	lastName = form.get("lastName")
+	email = form.get("email")
+	aadharCard = form.get("aadharCard")
+	houseNo = form.get("houseNo")
+	society = form.get("society")
+	pinCode = form.get("pinCode")
+	locality = form.get("locality")
+	mobileNumber = form.get("mobileNumber")
+
+	query = 'insert into complainant values (?,?,?,?,?,?,?,?,?,?)'
+	data_1 = connect()
+	cursor = getCursor(data_1)
+	cursor.execute(query, (int(aadharCard),str(firstName),str(middleName),str(lastName),str(email),int(houseNo),str(society),str(locality),int(pinCode),int(mobileNumber)))
+
+	#AadharCard bigint UN PK 
+# First_Name varchar(50) 
+# Middle_Name varchar(50) 
+# Last_Name varchar(50) 
+# Email varchar(150) 
+# H_NO int 
+# Society varchar(100) 
+# Locality varchar(100) 
+# PinCode int UN 
+# MobileNo bigint UN

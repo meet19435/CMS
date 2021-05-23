@@ -6,16 +6,20 @@ from datetime import date,datetime
 ##from form import RegistrationForm, LoginForm
 from database import *
 from news import run
+from flask_sqlalchemy import SQLAlchemy
+import json
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY']='2b293a243de5cb3f6d6e4eb4a0b526fa'
 
 
+
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
-	
+	print("first call")
 	if request.method == 'POST' and request.form['action'] =='Login':
+
 		
 		email = request.form.get("email")
 		password = request.form.get("pwd")
@@ -28,11 +32,17 @@ def login():
 
 		return redirect(url_for('login'))
 
-	elif request.method == 'POST' and request.form['action'] == 'sign-up':
+	elif request.method == 'POST' and request.form['action'] == 'Sign-up':
+		print("2nd call")
+		addComplainant(request.form)
+		print("adfbadvas")
 		
 		return redirect(url_for('login'))
 
 	return render_template('login.html', title = 'Login - CMS')
+
+
+
 
 @app.route('/home')
 @app.route('/')
