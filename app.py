@@ -6,7 +6,7 @@ from datetime import date,datetime
 ##from form import RegistrationForm, LoginForm
 from database import *
 from news import run
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 import json
 
 
@@ -17,25 +17,24 @@ app.config['SECRET_KEY']='2b293a243de5cb3f6d6e4eb4a0b526fa'
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
-	print("first call")
 	if request.method == 'POST' and request.form['action'] =='Login':
 
 		
 		email = request.form.get("email")
 		password = request.form.get("pwd")
 		isValid = checkCredentials(email,password)
+		error = ""
 
 		if(isValid):
 			flash('Welcome to CMS','Success')
 		else:
-			flash('Incorrect Password or Email','failure')
-
+			flash('Invalid Credentials','failure')
+		
 		return redirect(url_for('login'))
 
+
 	elif request.method == 'POST' and request.form['action'] == 'Sign-up':
-		print("2nd call")
 		addComplainant(request.form)
-		print("adfbadvas")
 		
 		return redirect(url_for('login'))
 

@@ -33,8 +33,15 @@
             <input type="password" id="pwd" name="pwd">
             <input id="submit" type="submit" name="action" value="Login">
             <div class="alert">
-                <i class="material-icons">error_outline</i>
-                <p id="incorrect"></p>
+                <i class="material-icons" title="">error_outline</i>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p id="incorrect">{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
             </div>
             <div id="sign-up">
                 <p>Create an account -</p>

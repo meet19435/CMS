@@ -27,7 +27,7 @@ def checkCredentials(email,password):
 
 	data_1 = connect()
 	cursor = getCursor(data_1)
-	query = "select * from users where email = '" + str(email) + "' and pass = "  + password
+	query = "select * from users where email = '" + str(email) + "' and pass = '"  + password+"'"
 	ans = executeQuery(query,cursor)
 	
 	if(len(ans) > 0):
