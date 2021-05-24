@@ -9,32 +9,41 @@
 body {
   overflow-x: hidden;
 }
-header {
+nav .grid{
+  display: grid;
+}
+nav .grid .outline{
+  background: #a27c67;
+  height: 10px;
+  width: 100%;
+}
+nav .flex{
   display: flex;
+  background: #314d74;
   align-items: center;
   position: relative;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   background: #314d74;
-  padding: 7px;
+  padding: 5px;
 }
-header ul {
+nav .flex ul{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header ul li {
+nav .flex ul li{
   list-style: none;
-  padding: 20px;
+  padding: 15px;
 }
-header ul li a {
+nav .flex ul li a {
   font-size: 20px;
   text-decoration: none;
   color: #fff;
   border-radius: 15px;
   padding: 5px;
 }
-header #Sign {
+nav .flex #Sign {
   font-size: 20px;
   margin-right: 20px;
   text-decoration: none;
@@ -42,25 +51,24 @@ header #Sign {
   border-radius: 15px;
   padding: 5px;
 }
-header h1 {
-  position: relative;
+nav .flex h1 {
   color: #fff;
   text-transform: uppercase;
-  margin-left: -100px;
+  font-size: 30px;
 }
-.outline {
+nav .grid .outline {
   position: relative;
   background: #a27c67;
   width: 100%;
   height: 10px;
 }
-header ul li a:hover,
-header ul li a.active1 {
+nav .flex ul li a:hover,
+nav .flex ul li a.active1 {
   background: #fff;
   color: #314d74;
   transition: 0.5s;
 }
-header #Sign:hover {
+nav .flex #Sign:hover {
   background: #fff;
   color: #314d74;
   transition: 0.5s;
@@ -96,7 +104,7 @@ header #Sign:hover {
   float: left;
   padding-left: 5%;
   max-width: 70%;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
 }
 .gallery-cell img{

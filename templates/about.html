@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,21 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style/about.css') }}">
 </head>
+
 <body>
-    <header> 
-        <ul>
-            <li><a href="{{ url_for('home') }}" class="active1">Home</a></li>
-            <li><a href="{{ url_for('about') }}" class="active2">About</a></li>
-        </ul>
-        <h1>Logo</h1>
-        <a id="Sign" href="{{ url_for('login') }}" class="active3">Sign In</a>
-    </header>
-    <div class="outline">
-    </div>
-    <div class="circle1"></div>
+    <nav>
+        <div class="grid">
+            <div class="flex">
+                <ul>
+                    <li><a href="{{ url_for('home') }}" class="active1">Home</a></li>
+                    <li><a href="{{ url_for('about') }}" class="active2">About</a></li>
+                </ul>
+                <h1>Logo</h1>
+                <a id="Sign" href="{{ url_for('login') }}" class="active3">Sign In</a>
+            </div>
+            <div class="outline"></div>
+        </div>
+    </nav>
 </body>
+
 </html>
