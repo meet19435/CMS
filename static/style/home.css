@@ -105,6 +105,9 @@ header #Sign:hover {
   margin-right: 10px;
   box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5);
 }
+.gallery-cell img[src=""]{
+  display: none;
+}
 .gallery-cell a i{
   float: left;
   font-size: 20px;
