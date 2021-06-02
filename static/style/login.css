@@ -181,8 +181,8 @@ nav .flex #Sign:hover {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 640px;
+    max-height: 640px;
     border-radius: 10px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     background: #fff;
@@ -209,7 +209,7 @@ nav .flex #Sign:hover {
 }
 #popup .singupform .head p{
   float: center;
-  margin-left: 35%;
+  margin-left: 30%;
   font-size: 25px;
   color: #fff;
   padding: 5px;
@@ -230,6 +230,10 @@ nav .flex #Sign:hover {
   margin-bottom: 1%;
   font-family: var(--singup-font-family);
 }
+#popup .singupform .name p::after{
+  content:" *";
+  color: red;
+}
 #popup .singupform .name .nameIn{
   display: flex;
   height: 30px;
@@ -243,16 +247,96 @@ nav .flex #Sign:hover {
   padding: 10px;
   box-shadow: 0px 2px 5px 3px #00000040;
 }
+#popup .singupform .email-username{
+  display: flex;
+  margin-left: 4%;
+  margin-top: 2%;
+}
 #popup .singupform .email p{
   margin-top: 2%;
   margin-left: 5%;
   margin-bottom: 1%;
   font-family: var(--singup-font-family);
 }
+#popup .singupform .email p::after{
+  content:" *";
+  color: red;
+}
 #popup .singupform .email input{
   height: 30px;
   margin-left: 5%;
-  width: 35%;
+  width: 110%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .username{
+  margin-left: 10%;
+}
+#popup .singupform .username p{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .username p::after{
+  content:" *";
+  color: red;
+}
+#popup .singupform .username input{
+  height: 30px;
+  margin-left: 5%;
+  width: 85%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .password{
+  display: flex;
+  margin-left: 4%;
+  margin-top: 2%;
+}
+#popup .singupform .password .p1 p{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .password .p1 p::after{
+  content:" *";
+  color: red;
+}
+#popup .singupform .password .p1 input{
+  height: 30px;
+  margin-left: 5%;
+  width: 90%;
+  border-radius: 5px;
+  background: #f8f8f8;
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 2px 5px 3px #00000040;
+}
+#popup .singupform .password .p2{
+  margin-left: 10%;
+}
+#popup .singupform .password .p2 p{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  font-family: var(--singup-font-family);
+}
+#popup .singupform .password .p2 p::after{
+  content:" *";
+  color: red;
+}
+#popup .singupform .password .p2 input{
+  height: 30px;
+  margin-left: 5%;
+  width: 90%;
   border-radius: 5px;
   background: #f8f8f8;
   border: none;
@@ -264,6 +348,10 @@ nav .flex #Sign:hover {
   margin-left: 5%;
   margin-bottom: 1%;
   font-family: var(--singup-font-family);
+}
+#popup .singupform .aadhar p::after{
+  content:" *";
+  color: red;
 }
 #popup .singupform .aadhar input{
   height: 30px;
@@ -279,6 +367,10 @@ nav .flex #Sign:hover {
   margin-top: 2%;
   margin-left: 5%;
   font-family: var(--singup-font-family);
+}
+#popup .singupform .address p::after{
+  content:" *";
+  color: red;
 }
 #popup .singupform .address .grid{
   display: grid;
@@ -305,7 +397,7 @@ nav .flex #Sign:hover {
 #popup .singupform .address .grid .flex #pin{
   width: 20%;
 }
-#popup .singupform .address .grid input{
+#popup .singupform .address .grid select{
   height: 30px;
   margin-top: 2%;
   margin-left: 5%;
@@ -313,7 +405,6 @@ nav .flex #Sign:hover {
   border-radius: 5px;
   background: #f8f8f8;
   border: none;
-  padding: 10px;
   box-shadow: 0px 2px 5px 3px #00000040;
 }
 #popup .singupform .mobile p{
@@ -321,6 +412,10 @@ nav .flex #Sign:hover {
   margin-left: 5%;
   margin-bottom: 1%;
   font-family: var(--singup-font-family);
+}
+#popup .singupform .mobile p::after{
+  content:" *";
+  color: red;
 }
 #popup .singupform .mobile input{
   height: 30px;
