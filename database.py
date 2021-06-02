@@ -48,19 +48,27 @@ def addComplainant(form):
 	pinCode = form.get("pinCode")
 	locality = form.get("locality")
 	mobileNumber = form.get("mobileNumber")
-
-	query = 'insert into complainant values (?,?,?,?,?,?,?,?,?,?)'
+	User_Id = form.get("aadharCard")
+	Username = form.get("userName")
+	Pass = form.get("pwd")
+	Type_ = "Complainant"
+	query = 'insert into complainant (aadharcard, first_name,middle_name,last_name,email,h_no,society,locality, pincode,mobileno) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
 	data_1 = connect()
 	cursor = getCursor(data_1)
-	cursor.execute(query, (int(aadharCard),str(firstName),str(middleName),str(lastName),str(email),int(houseNo),str(society),str(locality),int(pinCode),int(mobileNumber)))
+	data = (int(aadharCard),firstName,middleName,lastName,email,houseNo,society,locality,int(pinCode),int(mobileNumber))
+	cursor.execute(query, data)
+	
+	# cursor.execute("select * from complainant limit 10")
+	# for i in cursor:
+	#     print(i)
 
-	#AadharCard bigint UN PK 
-# First_Name varchar(50) 
-# Middle_Name varchar(50) 
-# Last_Name varchar(50) 
-# Email varchar(150) 
-# H_NO int 
-# Society varchar(100) 
-# Locality varchar(100) 
-# PinCode int UN 
-# MobileNo bigint UN
+	query = 'insert into users (User_Id, Email,Username,Pass,Type_) values (%s,%s,%s,%s,%s)'
+	query = query.lower()
+	data = (int(User_Id),email,Username,Pass,Type_)
+	cursor.execute(query, data)
+	
+	# cursor.execute("select * from users where Type_= 'Complainant';")
+	# query = query.lower()
+	# for i in cursor:
+	#     print(i)
+	data_1.commit()

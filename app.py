@@ -27,15 +27,18 @@ def login():
 
 		if(isValid):
 			flash('Welcome to CMS','Success')
+			print("valid")
 		else:
 			flash('Invalid Credentials','failure')
+			print("invalid")
 		
 		return redirect(url_for('login'))
 
 
 	elif request.method == 'POST' and request.form['action'] == 'Sign-up':
+		print("enter 1")
 		addComplainant(request.form)
-		
+		print("end 1")
 		return redirect(url_for('login'))
 
 	return render_template('login.html', title = 'Login - CMS')
