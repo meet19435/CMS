@@ -10,3 +10,13 @@ Safety and security of citizens is of primary importance to a country and ensuri
 With the combination of a well designed DataBase System, a user friendly interface and data modelling techniques, we aim to provide citizens with the accurate data of a nation’s crime, while also providing the police and investigating officers with a platform to maintain and access criminal data and legal data associated with a case for conducting high level crime investigations.This platform serves as a tool for the government to properly document, update and access criminal data while also utilising this data to provide statistics and advisories to its citizens. Hence, this platform will help monitor crime data 24*7.
 
 ![Project Summary](readme_images/img1.png?raw=true)
+
+## Identifying Stake Holders with their roles
+
+1. Government (Ministry of Home affairs)- The department of Government of India that deals with crime and criminals. It is under this department where we get to find crime departments working under. 
+
+Roles-
+    1.Manage employees
+    2.Manage data
+    3.See for better options to help citizens in fighting crime
+
