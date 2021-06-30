@@ -14,9 +14,9 @@ With the combination of a well designed DataBase System, a user friendly interfa
 ## Identifying Stake Holders with their roles
 
 1. Government (Ministry of Home affairs)- The department of Government of India that deals with crime and criminals. It is under this department where we get to find crime departments working under. </br/>
-    Roles - <br/>
-        1.Manage employees <br/>
-        2.Manage data <br/>
+&nbsp;Roles - <br/>
+&nbsp;&nbsp;1.Manage employees <br/>
+&nbsp;&nbsp;2.Manage data <br/>
         3.See for better options to help citizens in fighting crime
     
 2. Police Service- The department that deals with all kinds of crimes . It is after the investigation from this department that the cases  are transferred to others.<br/>
@@ -39,7 +39,7 @@ With the combination of a well designed DataBase System, a user friendly interfa
     Roles - <br/>
         1.Checking the complaint status <br/>
         2.Filing the complaint <br/>
-        3.Looking for general data of their locality ,br/>
+        3.Looking for general data of their locality <br/>
 
 
         
