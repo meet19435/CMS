@@ -13,9 +13,36 @@ With the combination of a well designed DataBase System, a user friendly interfa
 
 ## Identifying Stake Holders with their roles
 
-1. Government (Ministry of Home affairs)- The department of Government of India that deals with crime and criminals. It is under this department where we get to find crime departments working under. <br/>
-Roles-
-    1.Manage employees <br/>
-    2.Manage data <br/>
-    3.See for better options to help citizens in fighting crime
+1. Government (Ministry of Home affairs)- The department of Government of India that deals with crime and criminals. It is under this department where we get to find crime departments working under. </br/>
+    Roles - <br/>
+        1.Manage employees <br/>
+        2.Manage data <br/>
+        3.See for better options to help citizens in fighting crime
+    
+2. Police Service- The department that deals with all kinds of crimes . It is after the investigation from this department that the cases  are transferred to others.<br/>
+    Roles - <br/>
+        1.Filing complaints<br/>
+        2.Maintaing records<br/>
+        3.Doing investigations<br/>
+        4.Doing verifications of various kinds<br/>
+
+3. Investigation bureau -This department is responsible for doing investigation only when the crimes are related to economics or corruption or crimes where police are unable to find something.<br/>
+    Roles - <br/>
+        1. Conducting research<br/>
+        2. Filing complaint<br/>
+        3. Maintaining data<br/>
+4. Crime Record Management employees- The records which we get to know through government sites or media is fetched into the database by these people.<br/>
+    Roles - <br/>
+        1.Management of database <br/>
+        2.Checking the database <br/>
+5. General Public-The crime department is present to protect the citizens of the country. Every crime is done around people.<br/>
+    Roles - <br/>
+        1.Checking the complaint status <br/>
+        2.Filing the complaint <br/>
+        3.Looking for general data of their locality ,br/>
+
+
+        
+
+
 
